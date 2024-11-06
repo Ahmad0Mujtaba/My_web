@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmad Mujtaba Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1, h2, p {
+            margin: 20px 0;
+        }
+
+        #hidden-image {
+            display: none; /* Initially hide the image */
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            background-color: #333;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+            button:hover {
+                background-color: #555;
+            }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Ahmad Mujtaba Website!</h1>
+    <p>This is a simple website created in under 30 minutes just for fun.</p>
+    <h2>Hope everything is going well and be happy with all the life brings!</h2>
+
+    <!-- Buttons for showing the image and closing the website -->
+    <button onclick="showImage()">Show Picture</button>
+    <button onclick="closeWebsite()">Code by Ahmad Mujtaba & Close Website</button>
+
+    <!-- Hidden image that will display when the button is clicked -->
+    <img id="hidden-image" src="Mujtaba.jpg" alt="Mujtaba's Image">
+
+    <script>
+        // Function to show the hidden image
+        function showImage() {
+            document.getElementById("hidden-image").style.display = "block";
+        }
+
+        // Function to show a message and close the website
+        function closeWebsite() {
+            alert("Code by Ahmad Mujtaba");
+            window.close(); // Attempt to close the window
+        }
+    </script>
+</body>
+</html>
