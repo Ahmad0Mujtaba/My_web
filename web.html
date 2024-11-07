@@ -35,15 +35,16 @@
             cursor: pointer;
         }
 
-            button:hover {
-                background-color: #555;
-            }
+        button:hover {
+            background-color: #555;
+        }
     </style>
 </head>
 <body>
     <h1>Welcome to Ahmad Mujtaba Website!</h1>
     <p>This is a simple website created in under 30 minutes just for fun.</p>
     <h2>Hope everything is going well and be happy with all the life brings!</h2>
+    <p>Yesterday's date: <span id="yesterday-date"></span></p>
 
     <!-- Buttons for showing the image and closing the website -->
     <button onclick="showImage()">Show Picture</button>
@@ -53,6 +54,17 @@
     <img id="hidden-image" src="Mujtaba.jpg" alt="Mujtaba's Image">
 
     <script>
+        // Function to calculate and display yesterday's date
+        function displayYesterdayDate() {
+            const today = new Date();
+            today.setDate(today.getDate() - 1); // Set date to yesterday
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById("yesterday-date").textContent = today.toLocaleDateString('en-US', options);
+        }
+
+        // Call the function to display the date on page load
+        displayYesterdayDate();
+
         // Function to show the hidden image
         function showImage() {
             document.getElementById("hidden-image").style.display = "block";
